@@ -143,6 +143,7 @@ input[type=number] {
   overflow: hidden;
   -webkit-transform: perspective(10px);
           transform: perspective(10px);
+  z-index: 2;
 }
 
 .animate-btn::before, .animate-btn::after {
@@ -1988,6 +1989,12 @@ html[dir="ltr"] .main-shapes .shape-orange {
   display: block;
 }
 
+@media (max-width: 575px) {
+  .footer-shapes .shape {
+    display: none;
+  }
+}
+
 .footer-shapes .start-blue {
   bottom: 0;
 }
@@ -2102,6 +2109,12 @@ html[dir="ltr"] .have-shapes .top-start-blue-triangle {
   left: 11px;
 }
 
+@media (max-width: 575px) {
+  .have-shapes .top-start-blue-triangle {
+    display: none;
+  }
+}
+
 .have-shapes .top-start-orange-square {
   top: 58px;
 }
@@ -2112,6 +2125,12 @@ html[dir="rtl"] .have-shapes .top-start-orange-square {
 
 html[dir="ltr"] .have-shapes .top-start-orange-square {
   left: 92px;
+}
+
+@media (max-width: 575px) {
+  .have-shapes .top-start-orange-square {
+    display: none;
+  }
 }
 
 .have-shapes .bottom-end-blue-triangle {
@@ -2152,5 +2171,11 @@ html[dir="rtl"] .have-shapes .bottom-start-orange-square {
 
 html[dir="ltr"] .have-shapes .bottom-start-orange-square {
   left: 115px;
+}
+
+@media (max-width: 575px) {
+  .have-shapes .bottom-start-orange-square {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
