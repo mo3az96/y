@@ -220,6 +220,18 @@ html[dir="ltr"] .main-btn:last-of-type {
   margin-left: 20px;
 }
 
+@media (max-width: 575px) {
+  .main-btn:last-of-type {
+    margin-top: 10px;
+  }
+  html[dir="rtl"] .main-btn:last-of-type {
+    margin-right: 0;
+  }
+  html[dir="ltr"] .main-btn:last-of-type {
+    margin-left: 0;
+  }
+}
+
 .about-section-btn {
   width: 162px;
   height: 48px;
@@ -1531,6 +1543,10 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
