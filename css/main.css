@@ -262,6 +262,68 @@ html[dir="ltr"] .main-btn:last-of-type {
   margin: 30px auto 0;
 }
 
+.paging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+
+.paging a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #E9F5FF;
+  font-size: 14px;
+  color: #0E5781;
+  fill: #0E5781;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.paging a:first-of-type {
+  border-radius: 0 2px 2px 0;
+}
+
+.paging a:last-of-type {
+  border-radius: 2px 0 0 2px;
+}
+
+html[dir="rtl"] .paging a ~ a {
+  border-right: none;
+}
+
+html[dir="ltr"] .paging a ~ a {
+  border-left: none;
+}
+
+.paging a:hover, .paging a:focus {
+  background-color: #0099B1;
+  color: #fff;
+  fill: #fff;
+  text-decoration: none;
+}
+
+.paging a.active {
+  background-color: #0099B1;
+  color: #fff;
+  fill: #fff;
+}
+
 .form-control {
   background-color: #fff;
   border-radius: 2px;
