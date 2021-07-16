@@ -110,4 +110,5 @@ $(document).ready(function () {
             $("body").toggleClass("overflow");
         })
     }
+    $("select.form-control").select2()
 });
