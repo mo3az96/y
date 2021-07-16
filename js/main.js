@@ -57,8 +57,53 @@ $(document).ready(function () {
             },
         },
     });
-     //////////** Menu **//////////
-     if ($(window).width() <= 767) {
+    if ($(window).width() <= 991) {
+        $(".service-projects-block .work-item").wrap("<div class='swiper-slide'></div>");
+        $(".service-projects-block .works-grid").addClass("swiper-wrapper").removeClass("works-grid");
+        $(".service-related-block .service-grid-item").wrap("<div class='swiper-slide'></div>");
+        $(".service-related-block .services-grid").addClass("swiper-wrapper").removeClass("services-grid");
+
+        var swiper = new Swiper('.service-projects-block .swiper-container', {
+            spaceBetween: 15,
+            loop: true,
+            // autoplay: {
+            //     delay: 5000,
+            // },
+            pagination: {
+                el: '.service-projects-block .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+        var swiper = new Swiper('.service-related-block .swiper-container', {
+            spaceBetween: 15,
+            loop: true,
+            // autoplay: {
+            //     delay: 5000,
+            // },
+            pagination: {
+                el: '.service-related-block .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+    }
+    //////////** Menu **//////////
+    if ($(window).width() <= 767) {
         $('.menu-btn').click(function () {
             $(this).toggleClass("active");
             $("nav").slideToggle(300);
