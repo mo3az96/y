@@ -373,7 +373,7 @@ html[dir="ltr"] .have-shapes .top-start-orange-square {
 }
 
 .have-shapes .bottom-end-blue-triangle {
-  bottom: 73px;
+  bottom: 7%;
 }
 
 html[dir="rtl"] .have-shapes .bottom-end-blue-triangle {
@@ -387,7 +387,7 @@ html[dir="ltr"] .have-shapes .bottom-end-blue-triangle {
 }
 
 .have-shapes .bottom-end-orange-square {
-  bottom: 90px;
+  bottom: 8.5%;
 }
 
 html[dir="rtl"] .have-shapes .bottom-end-orange-square {
@@ -454,30 +454,124 @@ html[dir="ltr"] .have-shapes .custom-blue {
   }
 }
 
-body:not(.home-body) .have-shapes {
-  position: relative;
-}
-
-body:not(.home-body) .have-shapes .shape {
-  display: block;
-}
-
-body:not(.home-body) .have-shapes .bottom-end-blue-triangle {
+.have-shapes .middel-end-blue-triangle {
   bottom: 50%;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
 }
 
-body:not(.home-body) .have-shapes .bottom-end-orange-square {
+html[dir="rtl"] .have-shapes .middel-end-blue-triangle {
+  left: 0;
+}
+
+html[dir="ltr"] .have-shapes .middel-end-blue-triangle {
+  right: 0;
+  -webkit-transform: scaleX(-1) translateY(50%);
+          transform: scaleX(-1) translateY(50%);
+}
+
+.have-shapes .middel-end-orange-square {
   bottom: calc(50% - 34px);
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
 }
 
-body:not(.home-body) .have-shapes .bottom-start-orange-square {
+html[dir="rtl"] .have-shapes .middel-end-orange-square {
+  left: 18px;
+}
+
+html[dir="ltr"] .have-shapes .middel-end-orange-square {
+  right: 18px;
+}
+
+.have-shapes .middel-start-blue-triangle {
   bottom: 50%;
-  -webkit-transform: none;
-          transform: none;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+html[dir="rtl"] .have-shapes .middel-start-blue-triangle {
+  right: 0;
+}
+
+html[dir="ltr"] .have-shapes .middel-start-blue-triangle {
+  left: 0;
+  -webkit-transform: scaleX(-1) translateY(50%);
+          transform: scaleX(-1) translateY(50%);
+}
+
+.have-shapes .middel-start-orange-square {
+  bottom: calc(50% - 34px);
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+html[dir="rtl"] .have-shapes .middel-start-orange-square {
+  right: 12px;
+}
+
+html[dir="ltr"] .have-shapes .middel-start-orange-square {
+  left: 12px;
+  -webkit-transform: scaleX(-1) translateY(50%);
+          transform: scaleX(-1) translateY(50%);
+}
+
+.have-shapes .middel-end-orange-square-triangle {
+  top: 60%;
+}
+
+html[dir="rtl"] .have-shapes .middel-end-orange-square-triangle {
+  left: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+html[dir="ltr"] .have-shapes .middel-end-orange-square-triangle {
+  right: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+  .have-shapes .middel-end-orange-square-triangle {
+    display: none;
+  }
+}
+
+.have-shapes .top-end-orange-square {
+  top: 20%;
+}
+
+html[dir="rtl"] .have-shapes .top-end-orange-square {
+  left: 40px;
+}
+
+html[dir="ltr"] .have-shapes .top-end-orange-square {
+  right: 40px;
+}
+
+.have-shapes .bottom-start-orange-square {
+  bottom: 30%;
+}
+
+html[dir="rtl"] .have-shapes .bottom-start-orange-square {
+  right: 40px;
+}
+
+html[dir="ltr"] .have-shapes .bottom-start-orange-square {
+  left: 40px;
+}
+
+.have-shapes .bottom-start-blue-square {
+  bottom: 30%;
+}
+
+html[dir="rtl"] .have-shapes .bottom-start-blue-square {
+  right: 40px;
+}
+
+html[dir="ltr"] .have-shapes .bottom-start-blue-square {
+  left: 40px;
 }
 
 .animate-btn {
@@ -1656,6 +1750,8 @@ html[dir="ltr"] .consultant-item .consultant-link {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 991px) {
@@ -2451,10 +2547,6 @@ html[dir="ltr"] .header-nav .nav-item:last-of-type {
   }
 }
 
-body:not(.home-body) .have-shapes .shape {
-  display: none;
-}
-
 .breadcrumb-ul {
   margin: 0;
   display: -webkit-box;
@@ -3183,6 +3275,7 @@ html[dir="rtl"] .chant .half-line:nth-of-type(odd) {
   border: 1px solid #E2ECF3;
   padding: 20px 20px 55px;
   position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 575px) {
@@ -3229,6 +3322,8 @@ html[dir="rtl"] .chant .half-line:nth-of-type(odd) {
 
 .service-second-block {
   margin-top: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 .service-head {
@@ -4430,6 +4525,8 @@ html[dir="ltr"] .small-work .small-work-links {
 .post-desc {
   background-color: #fff;
   border: 1px solid #E2ECF3;
+  position: relative;
+  z-index: 2;
 }
 
 .post-desc-body {
