@@ -40,7 +40,6 @@ $(document).ready(function () {
     });
     var swiper = new Swiper(".blog-slider .swiper-container", {
         loop: true,
-        spaceBetween: 30,
         pagination: {
             el: ".blog-slider .swiper-pagination",
             clickable: true,
