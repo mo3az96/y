@@ -49,9 +49,17 @@
 
 body {
   position: relative;
+  overflow-x: hidden;
+}
+
+html[dir="rtl"] body {
   font-family: GESS;
   font-weight: 300;
-  overflow-x: hidden;
+}
+
+html[dir="ltr"] body {
+  font-family: en;
+  font-weight: 400;
 }
 
 html {
@@ -130,6 +138,38 @@ input[type=number] {
   src: url("../fonts/Almarai/Almarai-Regular.ttf") format("woff2"), url("../fonts/Almarai/Almarai-Regular.woff") format("woff"), url("../fonts/Almarai/Almarai-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'en';
+  src: url("../fonts/en/Montserrat-Light.woff2") format("woff2"), url("../fonts/en/Montserrat-Light.woff") format("woff"), url("../fonts/en/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'en';
+  src: url("../fonts/en/Montserrat-Regular.woff2") format("woff2"), url("../fonts/en/Montserrat-Regular.woff") format("woff"), url("../fonts/en/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'en';
+  src: url("../fonts/en/Montserrat-Medium.woff2") format("woff2"), url("../fonts/en/Montserrat-Medium.woff") format("woff"), url("../fonts/en/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'en';
+  src: url("../fonts/en/Montserrat-Bold.woff2") format("woff2"), url("../fonts/en/Montserrat-Bold.woff") format("woff"), url("../fonts/en/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 .shape {
@@ -1411,12 +1451,19 @@ html[dir="ltr"] .service-item .triangle {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 14px;
-  font-family: DIN;
   font-weight: 400;
   color: #0099B1;
   fill: #0099B1;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+html[dir="rtl"] .service-item .more {
+  font-family: DIN;
+}
+
+html[dir="ltr"] .service-item .more {
+  font-family: en;
 }
 
 html[dir="rtl"] .service-item .more svg {
@@ -2654,11 +2701,18 @@ section.section-bg {
 
 .section-subtitle {
   color: #0E5781;
-  font-family: 'Almarai';
   font-weight: 400;
   text-align: center;
   margin: 0;
   font-size: 16px;
+}
+
+html[dir="rtl"] .section-subtitle {
+  font-family: Almarai;
+}
+
+html[dir="ltr"] .section-subtitle {
+  font-family: en;
 }
 
 .section-paragraph {
@@ -3755,12 +3809,19 @@ html[dir="ltr"] .step .triangle {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 14px;
-  font-family: DIN;
   font-weight: 400;
   color: #0099B1;
   fill: #0099B1;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+html[dir="rtl"] .step .more {
+  font-family: DIN;
+}
+
+html[dir="ltr"] .step .more {
+  font-family: en;
 }
 
 html[dir="rtl"] .step .more svg {
