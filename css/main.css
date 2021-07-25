@@ -3310,7 +3310,7 @@ html[dir="ltr"] .feature .triangle {
 
 @media (max-width: 575px) {
   .service-first-block {
-    padding: 20px 15px;
+    padding: 20px 15px 60px;
   }
 }
 
@@ -3991,6 +3991,8 @@ html[dir="ltr"] .service-order-block::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 575px) {
@@ -4089,6 +4091,11 @@ html[dir="ltr"] .service-order-block::before {
   }
 }
 
+.single-work-description {
+  position: relative;
+  z-index: 2;
+}
+
 html[dir="rtl"] .single-work-description {
   padding-left: 15px;
 }
@@ -4098,6 +4105,9 @@ html[dir="ltr"] .single-work-description {
 }
 
 @media (max-width: 575px) {
+  .single-work-description {
+    background-color: #fff;
+  }
   html[dir="rtl"] .single-work-description {
     padding-left: 00;
   }
@@ -4552,6 +4562,8 @@ html[dir="ltr"] .small-service .more {
   width: 970px;
   max-width: 100%;
   margin: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .map-block {
@@ -4562,6 +4574,8 @@ html[dir="ltr"] .small-service .more {
   padding: 30px;
   background-color: #fff;
   border: 1px solid #E2ECF3;
+  position: relative;
+  z-index: 2;
 }
 
 .map-block .block-title {
@@ -4606,7 +4620,7 @@ html[dir="ltr"] .small-service .more {
 
 @media (max-width: 575px) {
   .post-desc-body {
-    gap: 15px 15px 10px;
+    padding: 15px 15px 10px;
   }
 }
 
@@ -5147,6 +5161,7 @@ html[dir="ltr"] .small-blog .more svg {
 @media (max-width: 991px) {
   .consultant-main-desc {
     margin-top: 40px;
+    background-color: #F4F9FD;
   }
 }
 
