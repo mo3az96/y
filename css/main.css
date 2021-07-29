@@ -5276,7 +5276,12 @@ html[dir="ltr"] .quote-block {
 }
 
 footer {
-  background-color: #133E6B;
+  background-color: #113860;
+  background-image: url(../images/footer.png);
+  background-image: url(../images/footer.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .footer {
