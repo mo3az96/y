@@ -1,5 +1,7 @@
 
 $(document).ready(function () {
+    AOS.init();
+    
     var swiper = new Swiper(".parteners-slider .swiper-container", {
         loop: true,
         spaceBetween: 30,

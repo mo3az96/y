@@ -2779,15 +2779,19 @@ main {
 
 .main-img {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .main-img img {
-  position: relative;
-  z-index: 2;
+  position: absolute;
 }
 
-.main-img .pattern {
-  position: absolute;
+.main-img img.pattern {
   top: -50px;
   width: 114px;
   z-index: 1;
@@ -2795,18 +2799,40 @@ main {
           animation: flasher 7s linear infinite;
 }
 
-html[dir="rtl"] .main-img .pattern {
+html[dir="rtl"] .main-img img.pattern {
   right: -50px;
 }
 
-html[dir="ltr"] .main-img .pattern {
+html[dir="ltr"] .main-img img.pattern {
   left: -50px;
 }
 
 @media (max-width: 991px) {
-  .main-img .pattern {
+  .main-img img.pattern {
     display: none;
   }
+}
+
+.main-img img.bg {
+  position: relative;
+}
+
+.main-img img.man {
+  left: 110px;
+  z-index: 3;
+  bottom: 72px;
+}
+
+.main-img img.board {
+  left: 190px;
+  z-index: 2;
+  bottom: 140px;
+}
+
+.main-img img.woman {
+  bottom: 0;
+  right: 0;
+  z-index: 3;
 }
 
 @media (max-width: 991px) {
