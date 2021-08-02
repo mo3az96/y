@@ -2,6 +2,7 @@
 $(document).ready(function () {
     sal({
         once: false,
+        threshold: 0.1,
     });
     if ($(window).width() <= 767) {
         const scrollAnimations = sal();
