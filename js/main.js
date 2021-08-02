@@ -1,13 +1,21 @@
 
-$(document).ready(function () {
-    sal({
-        once: false,
-        threshold: 0.3,
+$(window).on('load', function () {
+    $('.pre-loader').fadeOut("500", function () {
+        $(this).remove();
+        $("body").removeClass("overflow");
+
+        sal({
+            once: false,
+            threshold: 0.3,
+        });
+        if ($(window).width() <= 767) {
+            const scrollAnimations = sal();
+            scrollAnimations.disable();
+        }
     });
-    if ($(window).width() <= 767) {
-        const scrollAnimations = sal();
-        scrollAnimations.disable();
-    }
+});
+$(document).ready(function () {
+
 
     var swiper = new Swiper(".parteners-slider .swiper-container", {
         loop: true,
