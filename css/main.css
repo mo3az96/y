@@ -1223,6 +1223,8 @@ html[dir="ltr"] .select2-container .select2-search--dropdown .select2-search__fi
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 991px) {
