@@ -1,7 +1,13 @@
 
 $(document).ready(function () {
-    AOS.init();
-    
+    sal({
+        once: false,
+    });
+    if ($(window).width() <= 767) {
+        const scrollAnimations = sal();
+        scrollAnimations.disable();
+    }
+
     var swiper = new Swiper(".parteners-slider .swiper-container", {
         loop: true,
         spaceBetween: 30,

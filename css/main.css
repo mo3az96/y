@@ -2793,6 +2793,23 @@ main {
   position: absolute;
 }
 
+@media (max-width: 991px) {
+  .main-img img {
+    display: none;
+  }
+}
+
+.main-img img.all {
+  position: relative;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .main-img img.all {
+    display: block;
+  }
+}
+
 .main-img img.pattern {
   top: -50px;
   width: 114px;
