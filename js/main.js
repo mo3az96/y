@@ -12,6 +12,8 @@ $(window).on('load', function () {
             const scrollAnimations = sal();
             scrollAnimations.disable();
         }
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
     });
 });
 $(document).ready(function () {

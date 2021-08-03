@@ -2976,18 +2976,18 @@ main {
 
 @media (max-width: 991px) {
   .main-img img {
-    display: none;
+    display: none !important;
   }
 }
 
 .main-img img.all {
   position: relative;
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 991px) {
   .main-img img.all {
-    display: block;
+    display: block !important;
   }
 }
 
@@ -3014,25 +3014,35 @@ html[dir="ltr"] .main-img img.pattern {
 }
 
 .main-img img.bg {
-  position: relative;
+  position: relative !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  left: auto !important;
 }
 
 .main-img img.man {
-  left: 110px;
+  left: 110px !important;
   z-index: 3;
-  bottom: 72px;
+  bottom: 72px !important;
+  right: auto !important;
+  top: auto !important;
 }
 
 .main-img img.board {
-  left: 190px;
+  left: 190px !important;
   z-index: 2;
-  bottom: 140px;
+  bottom: 140px !important;
+  right: auto !important;
+  top: auto !important;
 }
 
 .main-img img.woman {
-  bottom: 0;
-  right: 0;
+  bottom: 0 !important;
+  right: 0 !important;
   z-index: 3;
+  left: auto !important;
+  top: auto !important;
 }
 
 @media (max-width: 991px) {
