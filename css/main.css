@@ -4225,6 +4225,8 @@ html[dir="ltr"] .service-order-block::before {
   margin: auto;
   background-color: #0099B1;
   padding: 55px 75px 40px;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 575px) {
