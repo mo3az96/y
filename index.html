@@ -150,18 +150,20 @@
             </a>
           </div>
         </div>
-        <div class="main-img">
-          <img src="images/main/main.png" class="img-fluid all">
-          <img src="images/main/woman.png" class="img-fluid woman" data-sal-duration="700" data-sal="slide-left"
-            data-sal-delay="1000">
-          <img src="images/main/man.png" class="img-fluid man" data-sal-duration="700" data-sal="slide-right"
-            data-sal-delay="800">
-          <img src="images/main/board.png" class="img-fluid board" data-sal-duration="700" data-sal="flip-left"
-            data-sal-delay="600">
-          <img src="images/main/bg.png" class="img-fluid bg" data-sal-duration="700" data-sal="zoom-in"
-            data-sal-delay="400">
-          <img src="images/main/pattern.png" class="img-fluid pattern" data-sal-duration="700" data-sal="zoom-in"
-            data-sal-delay="400">
+        <div class="main-parallax" id="scene">
+          <div class="main-img" data-depth="0.5">
+            <img src="images/main/main.png" class="img-fluid all">
+            <img src="images/main/woman.png" class="img-fluid woman" data-sal-duration="700" data-sal="slide-left"
+              data-sal-delay="1000">
+            <img src="images/main/man.png" class="img-fluid man" data-sal-duration="700" data-sal="slide-right"
+              data-sal-delay="800">
+            <img src="images/main/board.png" class="img-fluid board" data-sal-duration="700" data-sal="zoom-in"
+              data-sal-delay="600">
+            <img src="images/main/bg.png" class="img-fluid bg" data-sal-duration="700" data-sal="zoom-in"
+              data-sal-delay="400">
+            <img src="images/main/pattern.png" class="img-fluid pattern" data-sal-duration="700" data-sal="zoom-in"
+              data-sal-delay="400">
+          </div>
         </div>
       </div>
     </div>
@@ -1139,6 +1141,7 @@
   <!-- Start Footer -->
 
   <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/swiper.min.js"></script>

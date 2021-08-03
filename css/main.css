@@ -2960,6 +2960,15 @@ main {
   }
 }
 
+.main-parallax {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .main-img {
   position: relative;
   display: -webkit-box;
@@ -3014,35 +3023,25 @@ html[dir="ltr"] .main-img img.pattern {
 }
 
 .main-img img.bg {
-  position: relative !important;
-  right: auto !important;
-  top: auto !important;
-  bottom: auto !important;
-  left: auto !important;
+  position: relative;
 }
 
 .main-img img.man {
-  left: 110px !important;
+  left: 110px;
   z-index: 3;
-  bottom: 72px !important;
-  right: auto !important;
-  top: auto !important;
+  bottom: 72px;
 }
 
 .main-img img.board {
-  left: 190px !important;
+  left: 190px;
   z-index: 2;
-  bottom: 140px !important;
-  right: auto !important;
-  top: auto !important;
+  bottom: 140px;
 }
 
 .main-img img.woman {
-  bottom: 0 !important;
-  right: 0 !important;
+  bottom: 0;
+  right: -70px;
   z-index: 3;
-  left: auto !important;
-  top: auto !important;
 }
 
 @media (max-width: 991px) {

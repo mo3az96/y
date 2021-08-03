@@ -12,7 +12,7 @@ $(window).on('load', function () {
             const scrollAnimations = sal();
             scrollAnimations.disable();
         }
-        var scene = document.getElementById('scene');
+        var scene = $('#scene').get(0);
         var parallaxInstance = new Parallax(scene);
     });
 });
