@@ -5,7 +5,7 @@ $(window).on('load', function () {
         $("body").removeClass("overflow");
 
         sal({
-            once: false,
+            once: true,
             threshold: 0.3,
         });
         if ($(window).width() <= 767) {
