@@ -1,0 +1,55 @@
+.swiper-pagination {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: none;
+    margin-top: 55px;
+    display: none;
+
+    @include md {
+        display: flex;
+    }
+
+    @include xs {
+        margin-top: 30px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 5px;
+        height: 5px;
+        background-color: $sec;
+        opacity: 1;
+        margin: 0 2.5px;
+        border-radius: 2.5px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $main;
+        }
+
+        &.swiper-pagination-bullet-active {
+            width: 16px;
+            height: 4px;
+            background-color: $main;
+        }
+    }
+}
+
+.parteners-slider {
+    .swiper-pagination {
+        display: flex;
+    }
+}
+
+.blog-slider {
+    .swiper-pagination {
+        display: flex;
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'GESS';
+    src: url('../fonts/GESS/GESSTwoLight-Light.ttf') format('woff2'),
+        url('../fonts/GESS/GESSTwoLight-Light.woff') format('woff'),
+        url('../fonts/GESS/GESSTwoLight-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GESS';
+    src: url('../fonts/GESS/GESSTwoMedium-Medium.ttf') format('woff2'),
+        url('../fonts/GESS/GESSTwoMedium-Medium.woff') format('woff'),
+        url('../fonts/GESS/GESSTwoMedium-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GESS';
+    src: url('../fonts/GESS/GESSTwoBold-Bold.ttf') format('woff2'),
+        url('../fonts/GESS/GESSTwoBold-Bold.woff') format('woff'),
+        url('../fonts/GESS/GESSTwoBold-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN';
+    src: url('../fonts/DIN/DINNextLTW23-Regular.ttf') format('woff2'),
+        url('../fonts/DIN/DINNextLTW23-Regular.woff') format('woff'),
+        url('../fonts/DIN/DINNextLTW23-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Almarai';
+    src: url('../fonts/Almarai/Almarai-Regular.ttf') format('woff2'),
+        url('../fonts/Almarai/Almarai-Regular.woff') format('woff'),
+        url('../fonts/Almarai/Almarai-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/////////////////// en
+@font-face {
+    font-family: 'en';
+    src: url('../fonts/en/Montserrat-Light.woff2') format('woff2'),
+        url('../fonts/en/Montserrat-Light.woff') format('woff'),
+        url('../fonts/en/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'en';
+    src: url('../fonts/en/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/en/Montserrat-Regular.woff') format('woff'),
+        url('../fonts/en/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'en';
+    src: url('../fonts/en/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/en/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/en/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'en';
+    src: url('../fonts/en/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/en/Montserrat-Bold.woff') format('woff'),
+        url('../fonts/en/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

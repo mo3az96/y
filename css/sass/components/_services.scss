@@ -1,0 +1,228 @@
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+
+    @include md {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+}
+
+.service-grid-item {
+    position: relative;
+
+    &::before {
+        box-shadow: 0px 2px 45px rgba(0, 0, 0, 0.051);
+        border: 4px solid #DF7501;
+        position: absolute;
+        width: calc(100% - 15px);
+        height: 100%;
+        top: 0;
+        content: "";
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+
+        @include rtl {
+            right: 0;
+        }
+
+        @include ltr {
+            left: 0;
+        }
+    }
+
+    &:hover {
+        .service-item {
+            background-color: $sec;
+            color: #fff;
+            text-decoration: none;
+
+            @include rtl {
+                transform: translateX(-15px) translateY(-12px);
+            }
+
+            @include ltr {
+                transform: translateX(15px) translateY(-12px);
+            }
+        }
+
+        .service-icon {
+
+            img {
+                filter: brightness(0) invert(1);
+            }
+
+            &::after {
+                background-color: transparent;
+                transform: rotate(45deg) scale(1.15);
+            }
+        }
+
+        .triangle {
+            &::before {
+                border-color: transparent transparent #fff transparent;
+            }
+        }
+
+        .more {
+            color: #fff;
+            fill: #fff;
+        }
+
+        &::before {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 18px 12px 13px;
+    background-color: #fff;
+    color: $black;
+    position: relative;
+    z-index: 1;
+    text-decoration: none !important;
+    transition: all 0.3s ease-in-out;
+
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 27px;
+        margin-top: 15px;
+
+        img {
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &::after {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #F4F9FD;
+            border: 2px solid #fff;
+            content: "";
+            z-index: 1;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .service-name {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 5px 0 20px;
+    }
+
+    .service-summary {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 0 10px;
+        margin: 0 0 14px;
+    }
+
+    .service-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .triangle {
+        width: 47px;
+        height: 47px;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 47px 47px;
+            border-color: transparent transparent $sec transparent;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 36px 36px;
+            border-color: transparent transparent #fff transparent;
+            position: absolute;
+            bottom: 3px;
+            right: 3px;
+        }
+
+        @include ltr {
+            transform: scaleX(-1);
+        }
+    }
+
+    .more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: $sec;
+        fill: $sec;
+        transition: all 0.3s ease-in-out;
+
+        @include rtl {
+            font-family: DIN;
+        }
+
+        @include ltr {
+            font-family: en;
+        }
+
+        svg {
+            @include rtl {
+                margin-right: 11px;
+            }
+
+            @include ltr {
+                margin-left: 11px;
+                transform: scaleX(-1);
+            }
+        }
+    }
+}
+
+.order-section {
+    padding: 50px 0 0;
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+}

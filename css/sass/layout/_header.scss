@@ -1,0 +1,146 @@
+header {
+    padding-top: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    @include xs {
+        padding-top: 15px;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+
+    @include md {
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    display: block;
+    width: 170px;
+    flex-shrink: 0;
+
+    img {
+        max-width: 100%;
+    }
+
+    @include rtl {
+        margin-left: 81px;
+    }
+
+    @include ltr {
+        margin-right: 81px;
+    }
+
+    @include md {
+        @include rtl {
+            margin-left: 0;
+        }
+
+        @include ltr {
+            margin-right: 0;
+        }
+    }
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #145680;
+}
+
+.header-tools {
+    display: flex;
+    align-items: center;
+}
+
+.lang {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $main;
+        text-decoration: none;
+    }
+}
+
+.header-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #0099B1;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+
+    @include lg {
+        padding: 0;
+        width: 40px;
+    }
+
+    .btn-icon {
+        stroke: #0099B1;
+        fill: #0099B1;
+        display: flex;
+        transition: all 0.3s ease-in-out;
+
+        &::after {
+            content: "";
+            margin: 0 10px;
+            width: 1px;
+            height: 15px;
+            background-color: #145680;
+            transition: all 0.3s ease-in-out;
+
+            @include lg {
+                display: none;
+            }
+        }
+    }
+
+    .btn-text {
+        font-size: 14px;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+
+        @include lg {
+            display: none;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #0099B1;
+        text-decoration: none;
+
+        .btn-icon {
+            stroke: #fff;
+            fill: #fff;
+
+            &::after {
+                background-color: #0099B1;
+            }
+        }
+    }
+
+    @include rtl {
+        margin-right: 15px;
+    }
+
+    @include ltr {
+        margin-left: 15px;
+    }
+}

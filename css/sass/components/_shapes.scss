@@ -1,0 +1,406 @@
+.shape {
+    display: none;
+    position: absolute;
+}
+
+.header-shapes {
+    .header {
+        position: relative;
+    }
+
+    .shape {
+        display: block;
+
+        @include md {
+            display: none;
+        }
+    }
+
+    .shape-blue {
+        top: 60px;
+
+        @include rtl {
+            left: 0;
+        }
+
+        @include ltr {
+            right: 0;
+        }
+    }
+
+    .shape-orange {
+        top: 145px;
+
+        @include rtl {
+            left: 20px;
+        }
+
+        @include ltr {
+            right: 20px;
+        }
+    }
+}
+
+.main-shapes {
+    position: relative;
+
+    .shape {
+        display: block;
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .shape-blue {
+        bottom: 0px;
+        z-index: 1;
+
+        @include rtl {
+            left: 0;
+        }
+
+        @include ltr {
+            right: 0;
+            transform: scaleX(-1);
+        }
+    }
+
+    .shape-orange {
+        bottom: 20px;
+
+        @include rtl {
+            left: 20px;
+        }
+
+        @include ltr {
+            right: 20px;
+        }
+    }
+}
+
+.footer-shapes {
+    position: relative;
+
+    .footer {
+        position: relative;
+    }
+
+    .shape {
+        display: block;
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .start-blue {
+        bottom: 0;
+
+        @include rtl {
+            right: 0;
+        }
+
+        @include ltr {
+            left: 0;
+            transform: scaleX(-1);
+        }
+    }
+
+    .start-orange {
+        bottom: 7px;
+
+        @include rtl {
+            right: 8px;
+        }
+
+        @include ltr {
+            left: 8px;
+        }
+    }
+
+    .end-blue {
+        bottom: 53px;
+
+        @include rtl {
+            left: 75px;
+        }
+
+        @include ltr {
+            right: 75px;
+        }
+    }
+
+    .end-orange {
+        top: 55px;
+
+        @include rtl {
+            left: 0;
+        }
+
+        @include ltr {
+            right: 0;
+        }
+    }
+}
+
+.have-shapes {
+    position: relative;
+
+    .shape {
+        display: block;
+    }
+
+    .top-start-orange-square-triangle {
+        top: 9px;
+
+        @include rtl {
+            right: 0;
+            transform: translateX(50%);
+        }
+
+        @include ltr {
+            left: 0;
+            transform: scaleX(-1) translateX(50%);
+        }
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .bottom-end-blue-square-triangle {
+        bottom: 10%;
+
+        @include rtl {
+            left: 0;
+            transform: translateX(-50%);
+        }
+
+        @include ltr {
+            right: 0;
+            transform: scaleX(-1) translateX(-50%);
+        }
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .top-start-blue-triangle {
+        top: 0;
+
+        @include rtl {
+            right: 11px;
+        }
+
+        @include ltr {
+            left: 11px;
+        }
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .top-start-orange-square {
+        top: 58px;
+
+        @include rtl {
+            right: 92px;
+        }
+
+        @include ltr {
+            left: 92px;
+        }
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .bottom-end-blue-triangle {
+        bottom: 7%;
+
+        @include rtl {
+            left: 0;
+        }
+
+        @include ltr {
+            right: 0;
+            transform: scaleX(-1);
+        }
+    }
+
+    .bottom-end-orange-square {
+        bottom: 8.5%;
+
+        @include rtl {
+            left: 18px;
+        }
+
+        @include ltr {
+            right: 18px;
+        }
+
+
+    }
+
+    .bottom-start-orange-square {
+        bottom: 0;
+        transform: translateY(50%);
+
+        @include rtl {
+            right: 115px;
+        }
+
+        @include ltr {
+            left: 115px;
+        }
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .custom-orange {
+        top: 75px;
+
+        @include rtl {
+            right: 67px;
+        }
+
+        @include ltr {
+            left: 67px;
+        }
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .custom-blue {
+        bottom: 0;
+
+        @include rtl {
+            left: 50px;
+        }
+
+        @include ltr {
+            right: 50px;
+        }
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .middel-end-blue-triangle {
+        bottom: 50%;
+        transform: translateY(50%);
+
+        @include rtl {
+            left: 0;
+        }
+
+        @include ltr {
+            right: 0;
+            transform: scaleX(-1) translateY(50%);
+        }
+    }
+
+    .middel-end-orange-square {
+        bottom: calc(50% - 34px);
+        transform: translateY(50%);
+
+        @include rtl {
+            left: 18px;
+        }
+
+        @include ltr {
+            right: 18px;
+        }
+    }
+
+    .middel-start-blue-triangle {
+        bottom: 50%;
+        transform: translateY(50%);
+
+        @include rtl {
+            right: 0;
+        }
+
+        @include ltr {
+            left: 0;
+            transform: scaleX(-1) translateY(50%);
+        }
+    }
+
+    .middel-start-orange-square {
+        bottom: calc(50% - 34px);
+        transform: translateY(50%);
+
+        @include rtl {
+            right: 12px;
+        }
+
+        @include ltr {
+            left: 12px;
+            transform: scaleX(-1) translateY(40%);
+        }
+    }
+
+    .middel-end-orange-square-triangle {
+        top: 60%;
+
+        @include rtl {
+            left: 0;
+            transform: translateX(-50%);
+        }
+
+        @include ltr {
+            right: 0;
+            transform: translateX(-50%);
+        }
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .top-end-orange-square {
+        top: 20%;
+
+        @include rtl {
+            left: 40px;
+        }
+
+        @include ltr {
+            right: 40px
+        }
+    }
+
+    .bottom-start-orange-square {
+        bottom: 30%;
+
+        @include rtl {
+            right: 40px;
+        }
+
+        @include ltr {
+            left: 40px;
+        }
+    }
+
+    .bottom-start-blue-square {
+        bottom: 30%;
+
+        @include rtl {
+            right: 40px;
+        }
+
+        @include ltr {
+            left: 40px;
+        }
+    }
+}

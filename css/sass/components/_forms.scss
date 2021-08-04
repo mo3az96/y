@@ -1,0 +1,82 @@
+.form-control {
+    background-color: #fff;
+    border-radius: 2px;
+    height: 48px;
+    color: $black;
+    border: 3px solid transparent;
+    border-bottom-color: $main;
+    padding: 0 20px;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    font-weight: 300;
+
+    &::placeholder {
+        font-size: 14px;
+        color: #738598;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: $main;
+    }
+
+}
+
+textarea {
+    &.form-control {
+        height: 180px;
+        padding: 16px 20px;
+        resize: none;
+    }
+}
+
+
+
+.form-btn {
+    margin: auto;
+    font-size: 16px;
+    font-weight: 700;
+    color: $black;
+    width: 170px;
+    height: 48px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.contact-form {
+    .form-line {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 10px;
+
+        @include xs {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+    }
+
+    .form-control {
+        height: 55px;
+        border: 1px solid #E2ECF3;
+        border-radius: 0;
+
+        &:focus {
+            border-color: $main;
+        }
+    }
+
+    textarea {
+        &.form-control {
+            height: 180px;
+        }
+    }
+
+    .form-btn {
+        color: #fff;
+        background-color: $sec;
+    }
+}

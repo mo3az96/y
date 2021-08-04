@@ -1,0 +1,59 @@
+.breadcrumb-section {
+    background: radial-gradient(closest-side at 50% 50%, #165A84 0%, #113860 100%);
+    padding: 150px 0 35px;
+
+    @include xs {
+        padding: 100px 0 0;
+    }
+}
+
+.breadcrumb-ul {
+    margin: 0;
+    display: flex;
+
+    @include xs {
+        display: none;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+
+        ~li {
+            &::before {
+                content: url(/../images/icons/chevrons.svg);
+                margin: 0 10px;
+
+                @include ltr {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: #fff;
+        stroke: #fff;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            stroke: $main;
+            color: $main;
+        }
+
+        svg {
+            @include rtl {
+                margin-left: 10px;
+            }
+
+            @include ltr {
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,230 @@
+.animate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transform: perspective(10px);
+    z-index: 2;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background-color: $text;
+        transition: all 0.3s ease-in-out;
+        transform: translate(13%, 190%) rotate(-30deg);
+        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+        z-index: -2;
+    }
+
+    &::after {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        z-index: -1;
+        background-color: $main;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: #fff;
+
+        &::after,
+        &::before {
+            transform: translate(0, 0);
+        }
+
+        &::after {
+            transition-delay: 0.2s;
+        }
+    }
+}
+
+.main-btn {
+    width: 170px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+
+    &:first-of-type {
+        background-color: $main;
+
+        &::after {
+            background-color: $sec;
+        }
+    }
+
+    &:last-of-type {
+        background-color: $sec;
+
+        &::after {
+            background-color: $main;
+        }
+
+        @include rtl {
+            margin-right: 20px;
+        }
+
+        @include ltr {
+            margin-left: 20px;
+        }
+
+        @include xs {
+            margin-top: 10px;
+
+            @include rtl {
+                margin-right: 0;
+            }
+
+            @include ltr {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.about-section-btn {
+    width: 162px;
+    height: 48px;
+    background-color: $sec;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+
+    @include md {
+        margin: auto;
+    }
+}
+
+.section-more {
+    width: 162px;
+    height: 48px;
+    background-color: $sec;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 30px auto 0;
+}
+
+.paging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border: 1px solid #E9F5FF;
+        font-size: 14px;
+        color: $text;
+        fill: $text;
+        transition: all 0.3s ease-in-out;
+
+        &:first-of-type {
+            border-radius: 0 2px 2px 0;
+        }
+
+        &:last-of-type {
+            border-radius: 2px 0 0 2px;
+        }
+
+        ~a {
+            @include rtl {
+                border-right: none;
+            }
+
+            @include ltr {
+                border-left: none;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $sec;
+            color: #fff;
+            fill: #fff;
+            text-decoration: none;
+        }
+
+        &.active {
+            background-color: $sec;
+            color: #fff;
+            fill: #fff;
+        }
+    }
+}
+
+.pages-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.page-btn {
+    width: 170px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+
+    &:first-of-type {
+        background-color: $main;
+
+        &::after {
+            background-color: $sec;
+        }
+
+        @include rtl {
+            svg {
+                margin-left: 15px;
+            }
+        }
+
+        @include ltr {
+            svg {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &:last-of-type {
+        background-color: $sec;
+
+        &::after {
+            background-color: $main;
+        }
+
+        @include ltr {
+            svg {
+                margin-left: 15px;
+            }
+        }
+
+        @include rtl {
+            svg {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    @include xs {
+        width: auto;
+        padding: 0 20px;
+    }
+}

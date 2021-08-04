@@ -1,0 +1,97 @@
+.consultant-main-info {
+    background-color: #fff;
+    padding-bottom: 15px;
+
+    .info-block {
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+
+    .consult-name {
+        font-size: 20px;
+        font-weight: 700;
+        color: #3A3A3A;
+        margin-bottom: 5px;
+
+        ~span {
+            color: $sec;
+            font-size: 12px;
+        }
+    }
+
+    .block-name {
+        font-size: 12px;
+        color: #000000;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        ~a {
+            color: $black;
+            font-size: 12px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover,
+            &:focus {
+                color: $main;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.consultant-main-desc {
+    position: relative;
+    z-index: 2;
+
+    @include md {
+        margin-top: 40px;
+        background-color: #F4F9FD;
+    }
+}
+
+.consultant-main-title {
+    font-size: 24px;
+    color: #3A3A3A;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.consultant-main-paragraph {
+    font-size: 14px;
+    color: #738598;
+    line-height: 28px;
+    margin-bottom: 20px;
+
+    &.black {
+        color: $black;
+    }
+}
+
+.quote-block {
+    background-color: #fff;
+    padding: 40px 30px;
+    font-size: 16px;
+    color: $black;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 30px 0;
+
+    @include rtl {
+        border-right: 6px solid $sec;
+    }
+
+    @include ltr {
+        border-left: 6px solid $sec;
+    }
+
+    @include md {
+        padding: 25px 15px;
+    }
+}
+
+.fields-title {
+    font-size: 20px;
+    color: #3A3A3A;
+    font-weight: 700;
+    margin-bottom: 20px;
+}

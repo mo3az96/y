@@ -1,0 +1,25 @@
+@keyframes flasher {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+       opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}

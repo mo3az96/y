@@ -1,0 +1,193 @@
+.header-nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    .nav-item {
+        position: relative;
+
+        &::after {
+            height: 3px;
+            content: "";
+            display: none;
+            background-color: #DF7501;
+            position: absolute;
+            top: 49px;
+
+            @include rtl {
+                right: 0;
+                left: -0;
+            }
+
+            @include ltr {
+                left: 0;
+                right: -0;
+            }
+        }
+
+        @include rtl {
+            margin-left: 30px;
+
+            &:last-of-type {
+                margin-left: 0;
+            }
+        }
+
+        @include ltr {
+            margin-right: 30px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        &.active {
+            .nav-link {
+                color: $main;
+            }
+
+            &::after {
+                display: block;
+            }
+        }
+    }
+
+    .nav-link {
+        padding: 0;
+        font-size: 14px;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $main;
+        }
+    }
+}
+
+.menu-btn {
+    font-size: 35px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: relative;
+    z-index: 99;
+    text-decoration: none !important;
+
+    &.active {
+        color: $main;
+
+        i {
+            &::before {
+                content: "\f00d";
+            }
+        }
+    }
+}
+
+@include md {
+    .menu-btn {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 98;
+        background: radial-gradient(closest-side at 50% 50%, rgba(22, 90, 132, 0.99) 0%, rgba(17, 56, 96, 0.99) 100%);
+        display: none;
+        padding: 95px 0;
+    }
+
+    .header-nav {
+        flex-direction: column;
+
+        .nav-item {
+            margin: 15px 0;
+
+            &::after {
+                display: none;
+            }
+
+            @include rtl {
+                margin-left: 0;
+            }
+
+            @include ltr {
+                margin-right: 0;
+            }
+
+            &.active {
+                .nav-link {
+                    color: $main;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .nav-link {
+            font-weight: 700;
+            font-size: 24px;
+        }
+    }
+
+    .lang {
+        position: absolute;
+        top: 43px;
+        font-size: 24px;
+
+        @include rtl {
+            margin: 0;
+            right: 15px;
+        }
+
+        @include ltr {
+            margin: 0;
+            left: 15px;
+        }
+    }
+
+    .header-tools {
+        justify-content: center;
+        margin-top: 150px;
+    }
+
+    .header-btn {
+        width: auto;
+        padding: 0 15px;
+
+        .btn-icon {
+            &::after {
+                display: block;
+            }
+        }
+
+        .btn-text {
+            display: block;
+        }
+
+        @include rtl {
+            margin: 0;
+
+            ~.header-btn {
+                margin-right: 15px;
+            }
+        }
+
+        @include ltr {
+            margin: 0;
+
+            ~.header-btn {
+                margin-left: 15px;
+            }
+        }
+    }
+}
