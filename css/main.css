@@ -5801,6 +5801,21 @@ html[dir="ltr"] .courses-title img {
   text-align: start;
 }
 
+@media (max-width: 767px) {
+  .courses-head-line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .courses-head-line .section-subtitle {
+    margin-bottom: 10px;
+  }
+}
+
 .filter-cont {
   display: -webkit-box;
   display: -ms-flexbox;

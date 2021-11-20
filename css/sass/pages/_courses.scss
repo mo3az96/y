@@ -24,6 +24,15 @@
     .section-subtitle {
         text-align: start;
     }
+
+    @include sm {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .section-subtitle {
+            margin-bottom: 10px;
+        }
+    }
 }
 
 .filter-cont {
