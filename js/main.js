@@ -80,6 +80,8 @@ $(document).ready(function () {
         $(".service-projects-block .works-grid").addClass("swiper-wrapper").removeClass("works-grid");
         $(".service-related-block .service-grid-item").wrap("<div class='swiper-slide'></div>");
         $(".service-related-block .services-grid").addClass("swiper-wrapper").removeClass("services-grid");
+        $(".course-related-block .course-grid-item").wrap("<div class='swiper-slide'></div>");
+        $(".course-related-block .courses-grid").addClass("swiper-wrapper").removeClass("courses-grid");
 
         $(".single-aside .small-blog").wrap("<div class='swiper-slide'></div>");
         $(".single-aside .related-blog").addClass("swiper-wrapper").removeClass("related-blog");
@@ -130,6 +132,25 @@ $(document).ready(function () {
             // },
             pagination: {
                 el: '.single-aside .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+        var swiper = new Swiper('.course-related-block .swiper-container', {
+            spaceBetween: 15,
+            loop: true,
+            // autoplay: {
+            //     delay: 5000,
+            // },
+            pagination: {
+                el: '.course-related-block .swiper-pagination',
                 clickable: true,
             },
             breakpoints: {

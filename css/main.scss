@@ -31,3 +31,36 @@
 @import 'sass/pages/single';
 @import 'sass/pages/consultant';
 @import 'sass/layout/footer';
+@import 'sass/pages/courses';
+@import 'sass/pages/course';
+
+
+.logo {
+    @include rtl {
+        margin-left: 31px;
+    }
+
+    @include ltr {
+        margin-right: 31px;
+    }
+
+    @include md {
+        @include rtl {
+            margin-left: 0;
+        }
+
+        @include ltr {
+            margin-right: 0;
+        }
+    }
+}
+
+.header-btn {
+    padding: 0 10px;
+
+    .btn-icon {
+        &::after {
+            margin: 0 5px;
+        }
+    }
+}
